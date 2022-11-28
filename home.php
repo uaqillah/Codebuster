@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
 <!DOCTYPE html>
@@ -185,10 +185,10 @@ li.dropdown {
 <body>
      <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
      <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">Explore</a></li>
-  <li><a href="#package">Package</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="home.php">Home</a></li>
+  <li><a href="explore.php">Explore</a></li>
+  <li><a href="package.php">Package</a></li>
+  <li><a href="contact.php">Contact</a></li>
   <li style="float:right" class="dropdown">
   <a href="javascript:void(0)" class="dropbtn">Setting</a>
   <div class="dropdown-content">
@@ -209,7 +209,7 @@ li.dropdown {
   <div class="column middle">
     <div class="gallery">
     <a target="_blank" href="img_5terre.jpg">
-      <img src="https://images.unsplash.com/photo-1575397721733-c58fa48e80ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmdrYXdpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Cinque Terre" width="400" height="200">
+      <img src="https://images.unsplash.com/photo-1575397721733-c58fa48e80ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmdrYXdpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"  width="400" height="200">
     </a>
   </div>
   </div>
@@ -225,15 +225,15 @@ li.dropdown {
   
   <div class="rows">
     <div class="columns">
-      <div><img class="img" src="https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_132460/20220822065654_m5yKV/jpg" alt="Cinque Terre" width="210" height="180" style="margin-left:100px"></div>
+      <div><img class="img" src="https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_132460/20220822065654_m5yKV/jpg"  width="210" height="180" style="margin-left:100px"></div>
     </div> 
     
     <div class="columns">
-      <div><img class="img" src="https://tourslangkawi.com/wp-content/uploads/2021/10/Island-Hopping-Langkawi-04-1-300x300.jpg" alt="Cinque Terre" width="200" height="180" style="margin-left:100px"></div>
+      <div><img class="img" src="https://tourslangkawi.com/wp-content/uploads/2021/10/Island-Hopping-Langkawi-04-1-300x300.jpg"  width="200" height="180" style="margin-left:100px"></div>
     </div> 
     
    <div class="columns">
-      <div><img class="img" src="https://www.langkawi-insight.com/langkawi_i00001e.jpg" alt="Cinque Terre" width="200" height="180" style="margin-left:100px"></div>
+      <div><img class="img" src="https://www.langkawi-insight.com/langkawi_i00001e.jpg"  width="200" height="180" style="margin-left:100px"></div>
     </div> 
 
     <div style="float:left; margin-left: 170px"> 
