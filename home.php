@@ -240,11 +240,11 @@ li.dropdown {
         Sunset Cruise <br/>  &ensp; RM200.00               
         </div>
         
-        <div style="float:left; margin-left: 260px"> 
+        <div style="float:left; margin-left: 350px"> 
         Island Hoping <br/>  &ensp; RM50.00                    
         </div>
         
-        <div style="float:left; margin-left: 300px"> 
+        <div style="float:left; margin-left: 370px"> 
         Mangrove Tour <br/>  &emsp; RM120.00                    
         </div>
   </div>
@@ -256,7 +256,7 @@ li.dropdown {
           <h2 style="text-align:center;background-color: white;">Comment & Review</h2>
      </div>
 
-     <div class="rating">
+     <div class="rating" style="margin-left: 200px;">
 <h4>Ahmad Ali</h4>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
