@@ -166,7 +166,9 @@ margin-left:10px;
 font-family: CenturyGothic, Geneva, AppleGothic, sans-serif;
 font-size: 15px;
 color: grey;
-}
+}    
+
+
 </style>
 </head>
 
@@ -214,12 +216,28 @@ color: grey;
   </div>
   
 </div>
+<form style="float: right;" action="fav.php" method="post" style="width: 30%;">
+  <input 
+style="float: right;margin-top:0px;width:90px;padding:0px;margin-right:0px;"
+type="submit" name="submit" Value="My Favourite"/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<input style="margin-right:400px" type="checkbox" name="check_list[]" value="Sunset Cruise">
+<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<input style="margin-right:100px" type="checkbox" name="check_list[]" value="Mangrove Tour">
+<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<input style="margin-right:100px" type="checkbox" name="check_list[]" value="Island Hopping">
+<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
+
+</form>
 
 <div class="container" style="margin-top: 50px;margin-left:50px;">
   <div style="flex-basis:300px"><img style="width: 100%; height: 100%" src="https://i.pinimg.com/564x/20/e6/70/20e670765ec0793e5ef8e296402430f5.jpg"></div>
   <div style="flex-basis:500px; ">
   <p style="margin-top: 20px;"><b>Sunset Cruise</b> <br/><br/> Great for travelling couples and honeymooners, it also includes buffet dinner on cruise <br/><br/><br/> <a style="color:white" href="sunset.php">Read more</a></p>
   </div>
+ 
 </div>
 
 <div class="container" style="margin-top: 50px;margin-left:50px;">
