@@ -90,16 +90,12 @@ li.dropdown {
 }
 
 #contact {
-  border: 1px solid #F8F8F8;
-  padding: 10px;
-  box-shadow: 2px 2px 5px #808080;
-  margin: 20px;
+  border: 0px solid #F8F8F8;
+  padding: 0px;
   margin-left: 100px;
-  margin-top: 10px;
-  border-radius:5px;
+  margin-top: 0px;
   width:30%;
   height:200px;
-  background-color: white;
   float: left;
 }
 
@@ -118,7 +114,7 @@ li.dropdown {
 }
 
 input[type=text], select, textarea {
-  width: 40%;
+  width: 42%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -238,6 +234,24 @@ img {
 .demo:hover {
   opacity: 1;
 }
+
+.kolom {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.baris:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a:link {
+  text-decoration: none;
+}
 </style>
 </head>
 
@@ -322,18 +336,21 @@ img {
 
 <br/><br/>
 <div id="contact">
-  <i class="fa fa-envelope" style="float:left;margin-top:30px; margin-left:15px;font-size:20px" ></i>
-  <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:30px; margin-left:40px"><b> &emsp;aisyahsha321@gmail.com</b> </p>
-  <i class="fa fa-phone" style="font-size:20px; margin-top:14px;margin-left:15px;float:left"></i>
-  <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:29px;margin-left:40px"><b> &emsp;01124254231</b> </p>
+    <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:30px; margin-left:40px"><b> &emsp;SHUHAILA TRAVEL AGENCIES</b> </p>
+  <img src="call.png" style="float:left;margin-top:15px; margin-left:50px;height:17px" >
+  <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:30px; margin-left:80px"><b> &emsp;01124254231</b> </p>
+  <img src="facebook-app-symbol.png" style="float:left;margin-top:15px; margin-left:50px;height:20px" >
+  <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:29px;margin-left:80px"><b> &emsp;Shuhaila Travel Agencies</b> </p>
+  <img src="email.png" style="float:left;margin-top:15px; margin-left:50px;height:20px" >
+  <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:29px;margin-left:80px"><b> &emsp;aisyahsha321@gmail.com</b> </p>
 </div>
 
 <form class="contact-form" action="contactform.php" method="post">
-  <input type="text" name="name" placeholder="Full name">
-  <input type="text" name="mail" placeholder="Your e-mail">
+  <input style="width:20%" type="text" name="name" placeholder="Full name">
+  <input style="width:20%" type="text" name="mail" placeholder="Your e-mail">
   <input type="text" name="subject" placeholder="Subject">
-  <textarea type="message" placeholder="Message"></textarea>
-  <button type="submit" name="submit">SEND MAIL</button>
+  <textarea style="height:150px" type="message" placeholder="Message"></textarea><br/>
+  <button style="margin-left:530px; background-color:black;color:white;padding:10px;border:none;border-radius:4px;font-family: Consolas, monaco, monospace;" type="submit" name="submit">SEND MAIL</button>
 </form>
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -342,11 +359,29 @@ img {
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
  
- <br/><br/><br/><br/><br/>
-<ul>
-  <li  style="float: right;"><img src="instagram.png" alt="" style="height:35px">&emsp;</li>
-  <li style="float: right;"><img src="facebook.png" alt="" style="height:35px">&emsp;</li>
-  <li style="float: right;"><img src="whatsapp.png" alt="" style="height:35px">&emsp;</li>
+ <br/>
+  <ul style="height:250px;color:white;font-family: Georgia, Times, "Times New Roman", serif;">
+  <div class="baris" style="margin-left:100px;margin-top:20px">
+  <div class="kolom" style="text-align:center">
+    <h3>OUR MOTTO</h3>
+    <p>Making your travel experience unforgettable can crafting unique and personalized itineraries, providing exceptional customer service, and going above and beyond to exceed your expectations, every step of the way</p>
+    <a href="https://www.facebook.com/Shuhaila-Travel-Agencies-114482994869639/"><img src="facebook2.png" style="height:35px"></a>
+    <a href="https://wa.link/x2oa9d"><img src="whatsapp2.png" alt="" style="height:35px"></a>
+    <a href=" https://www.instagram.com/shuhailatravelagencies/"><img src="instagram2.png" alt="" style="height:35px"></a>
+  </div>
+  <div class="kolom" style="text-align:center">
+    <h3>CONTACT INFO</h3>
+    <p>Phone:<br/>+601124254231</p>
+    <p >Email:<br/>aisyahsha321@gmail.com</p>
+  </div>
+  <div class="kolom" style="text-align:center">
+    <h3>QUICK LINKS</h3>
+    <p><a style="color:white" href="explore.php">Explore</a></p>
+    <p><a style="color:white" href="package.php">Package</a></p>
+    <p>Terms & Conditions</p>
+    <p>Disclaimers</p>
+  </div>
+</div>
   
 </ul>
 
