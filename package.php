@@ -184,6 +184,7 @@ color: grey;
   <a href="javascript:void(0)" class="dropbtn">Setting</a>
   <div class="dropdown-content">
   <a href="change-password.php">Change Password</a>
+  <a href="history.php">Booking History</a>
   <a href="logout.php">Logout</a>
   </div>
 </li>
@@ -198,7 +199,8 @@ color: grey;
 <h1 style="text-align: center;">Packages</h1>
 
 <div class="booking">
-  </div><form action="book.php">
+  </div>
+  <form action="booking.php">
   <div style="margin-left: 50px;width: 100px">
   <input type="submit" value="Book">
   </div></form>
@@ -225,21 +227,6 @@ color: grey;
 </form>
 </br></br></br></br></br></br></br>
 
-<form style="float: right;" action="fav.php" method="post" style="width: 30%;">
-  <input 
-style="float: right;margin-top:0px;width:90px;padding:0px;margin-right:0px;"
-type="submit" name="submit" Value="My Favourite"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<input style="margin-right:400px" type="checkbox" name="check_list[]" value="Sunset Cruise">
-<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<input style="margin-right:100px" type="checkbox" name="check_list[]" value="Mangrove Tour">
-<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<input style="margin-right:100px" type="checkbox" name="check_list[]" value="Island Hopping">
-<p style="font-size: 15px;margin-left:0px;margin-top:0px">Add to fav</p>
-
-</form>
 
 <div class="container" style="margin-top: 50px;margin-left:50px;">
   <div style="flex-basis:300px"><img style="width: 100%; height: 100%" src="https://i.pinimg.com/564x/20/e6/70/20e670765ec0793e5ef8e296402430f5.jpg"></div>
@@ -292,6 +279,14 @@ type="submit" name="submit" Value="My Favourite"/>
 </p>
 </div>
 </body>
+
+<br/><br/><br/><br/><br/>
+<ul>
+  <li  style="float: right;"><img src="instagram.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="facebook.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="whatsapp.png" alt="" style="height:35px">&emsp;</li>
+  
+</ul>
 </html>
 <?php 
 }else{
