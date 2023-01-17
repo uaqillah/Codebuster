@@ -22,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 	    exit();
 	}else{
 		// hashing the password
-        $pass = md5($pass);
+        $pass = $pass;
 
         
 		$sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'";

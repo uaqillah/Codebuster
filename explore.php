@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 
  ?>
 
@@ -132,6 +132,15 @@ li.dropdown {
        text-align: center;
        margin-top: 50px;
       }
+      input[type=text], select, input[type=date]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
 </style>
 </head>
 
@@ -146,9 +155,15 @@ li.dropdown {
   <a href="javascript:void(0)" class="dropbtn">Setting</a>
   <div class="dropdown-content">
   <a href="change-password.php">Change Password</a>
+  <a href="history.php">Booking History</a>
   <a href="logout.php">Logout</a>
   </div>
 </li>
+<li style="float: right; ">
+    <form action="search.php" method="GET">
+		<input style="width:100px; height: 20px;" type="text" name="query" placeholder="Search.." />
+	</form>
+  </li>
 </ul>
 
 <div class="explore">
@@ -226,7 +241,17 @@ li.dropdown {
         <img height="250" src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oeip0notjbakgq9khtcu/LangkawiIslandHoppingSharedSpeedboatTour.webp"  />
       </a>
     </div>
+
+    <br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<ul>
+  <li  style="float: right;"><img src="instagram.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="facebook.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="whatsapp.png" alt="" style="height:35px">&emsp;</li>
+  
+</ul>
 </body>
+
 </html>
 <?php 
 }else{

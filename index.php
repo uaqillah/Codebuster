@@ -18,6 +18,8 @@
 
      	<button type="submit">Login</button>
           <a href="signup.php" class="ca">Create an account</a>
+		  <br>
+		  <a href="forgot-pass.php" class="ca">Forgot Password</a>
      </form>
 </body>
 </html>

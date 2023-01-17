@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 
  ?>
 <!DOCTYPE html>
@@ -180,6 +180,22 @@ li.dropdown {
 .checked {
   color: orange;
 }
+input[type=text], select, input[type=date]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
 </head>
 <body>
@@ -193,15 +209,22 @@ li.dropdown {
   <a href="javascript:void(0)" class="dropbtn">Setting</a>
   <div class="dropdown-content">
   <a href="change-password.php">Change Password</a>
+  <a href="history.php">Booking History</a>
   <a href="logout.php">Logout</a>
   </div>
 </li>
+<li style="float: right; ">
+    <form action="search.php" method="GET">
+		<input style="width:100px; height: 20px;" type="text" name="query" placeholder="Search.." />
+	</form>
+  </li>
 </ul>
 
 
 
 <div class="row">
   <div class="column side">
+    <img src="logo.png" alt="" class="center" style="height:188px;width: 250px;">
     <h1 style="padding-left: 20px">Book Langkawi Tour Packages from Us!</h1>
     <p style="padding-left: 20px">We are dedicated to get you the best prices for Langkawi Sunset Cruise, Mangrove Tours, Island Hoping and other tours.</p>
   </div>
@@ -300,7 +323,12 @@ li.dropdown {
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
  
-
+  <ul>
+  <li  style="float: right;"><img src="instagram.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="facebook.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="whatsapp.png" alt="" style="height:35px">&emsp;</li>
+  
+</ul>
 
 </body>
 </html>

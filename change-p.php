@@ -30,8 +30,8 @@ if (isset($_POST['op']) && isset($_POST['np'])
 	  exit();
     }else {
     	// hashing the password
-    	$op = md5($op);
-    	$np = md5($np);
+    	$op = $op;
+    	$np = $np;
         $id = $_SESSION['id'];
 
         $sql = "SELECT password

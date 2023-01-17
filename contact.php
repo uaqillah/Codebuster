@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 
  ?>
 
@@ -10,11 +10,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <head>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-     <style>
+<style>
           * {
   box-sizing: border-box;
 }
@@ -96,7 +95,7 @@ li.dropdown {
   box-shadow: 2px 2px 5px #808080;
   margin: 20px;
   margin-left: 100px;
-  margin-top: 80px;
+  margin-top: 10px;
   border-radius:5px;
   width:30%;
   height:200px;
@@ -149,6 +148,96 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 </style>
 </head>
 
@@ -164,6 +253,7 @@ input[type=submit]:hover {
   <a href="javascript:void(0)" class="dropbtn">Setting</a>
   <div class="dropdown-content">
   <a href="change-password.php">Change Password</a>
+  <a href="history.php">Booking History</a>
   <a href="logout.php">Logout</a>
   </div>
 </li>
@@ -171,6 +261,66 @@ input[type=submit]:hover {
 
 <h1 style="text-align: center;">Get In Touch With Us!</h1>
 
+<div class="container">
+  <div class="mySlides">
+    <img src="https://media.gettyimages.com/id/1235327413/photo/visitors-walk-atop-the-lookout-point-near-langkawi-skycab-cable-car-in-langkawi-on-september.jpg?s=612x612&w=0&k=20&c=tAkU6kgufDsQDQeo51yhtTGYGRk-uqjnehDhD28m48g=" style="width:50%; margin-left:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://media.gettyimages.com/id/1235327090/photo/this-picture-shows-a-landmark-eagle-statue-in-langkawi-on-september-18-as-the-holiday-island.jpg?s=612x612&w=0&k=20&c=JzJ4npVEQ5wvlZHwxEtqPUKyZaVpVWQrh4Ghw-Ku8sM="  style="width:50%; margin-left:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://media.gettyimages.com/id/481586373/photo/malaysia-kedah-langkawi-datai-bay-beach.jpg?s=612x612&w=0&k=20&c=nESBhYck5GLgWYseqlppu0_KaKlsQ8-vqgBi2Cwec3A=" style="width:50%; margin-left:300px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://media.gettyimages.com/id/1235311407/photo/passengers-swim-in-the-sea-as-a-catamaran-yacht-sails-in-langkawi-on-september-17-as-the.jpg?s=612x612&w=0&k=20&c=aeRvWxIIDiK1kguBa4mbaNdXZPDLJI-Nyj4SbuddLqY=" style="width:50%; margin-left:300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://media.gettyimages.com/id/157727694/photo/langkawi-island-malaysia.jpg?s=612x612&w=0&k=20&c=fLGyUgcyI6UIYUThm-hSiqF1EotYdtyD9ofEDdZPisY=" style="width:50%; margin-left:300px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://media.gettyimages.com/id/1209823834/photo/langkawi-cable-car-also-known-as-langkawi-skycab-is-one-of-the-major-attractions-in-langkawi.jpg?s=612x612&w=0&k=20&c=GYMsZbdWvWNig6N3hlXVGDaQw8ai5VFTf_FI7gPOwN4=" style="width:50%; margin-left:300px">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/1235327413/photo/visitors-walk-atop-the-lookout-point-near-langkawi-skycab-cable-car-in-langkawi-on-september.jpg?s=612x612&w=0&k=20&c=tAkU6kgufDsQDQeo51yhtTGYGRk-uqjnehDhD28m48g=" style="width:100%" onclick="currentSlide(1)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/1235327090/photo/this-picture-shows-a-landmark-eagle-statue-in-langkawi-on-september-18-as-the-holiday-island.jpg?s=612x612&w=0&k=20&c=JzJ4npVEQ5wvlZHwxEtqPUKyZaVpVWQrh4Ghw-Ku8sM=" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/481586373/photo/malaysia-kedah-langkawi-datai-bay-beach.jpg?s=612x612&w=0&k=20&c=nESBhYck5GLgWYseqlppu0_KaKlsQ8-vqgBi2Cwec3A=" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/1235311407/photo/passengers-swim-in-the-sea-as-a-catamaran-yacht-sails-in-langkawi-on-september-17-as-the.jpg?s=612x612&w=0&k=20&c=aeRvWxIIDiK1kguBa4mbaNdXZPDLJI-Nyj4SbuddLqY=" style="width:100%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/157727694/photo/langkawi-island-malaysia.jpg?s=612x612&w=0&k=20&c=fLGyUgcyI6UIYUThm-hSiqF1EotYdtyD9ofEDdZPisY=" style="width:100%" onclick="currentSlide(5)">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://media.gettyimages.com/id/1209823834/photo/langkawi-cable-car-also-known-as-langkawi-skycab-is-one-of-the-major-attractions-in-langkawi.jpg?s=612x612&w=0&k=20&c=GYMsZbdWvWNig6N3hlXVGDaQw8ai5VFTf_FI7gPOwN4=" style="width:100%" onclick="currentSlide(6)">
+    </div>
+  </div>
+</div>
+
+<br/><br/>
 <div id="contact">
   <i class="fa fa-envelope" style="float:left;margin-top:30px; margin-left:15px;font-size:20px" ></i>
   <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:30px; margin-left:40px"><b> &emsp;aisyahsha321@gmail.com</b> </p>
@@ -178,23 +328,58 @@ input[type=submit]:hover {
   <p style="font-family: Consolas, monaco, monospace;font-size:15px;margin-top:29px;margin-left:40px"><b> &emsp;01124254231</b> </p>
 </div>
 
-<div id="message">
-<form action="">
-    <input style="float:left" type="text" id="fname" name="firstname" placeholder="first name">
-    <input style="margin-left:40px" type="text" id="lname" name="lastname" placeholder="last name">
-<br/>
-<input style="float:left" type="text" id="email" name="email" placeholder="email">
-    <input style="margin-left:40px" type="text" id="phone" name="phone" placeholder="phone number">
-    <br/>
-    <input type="text" id="subject" name="subject" placeholder="subject">
-<br/>
+<form class="contact-form" action="contactform.php" method="post">
+  <input type="text" name="name" placeholder="Full name">
+  <input type="text" name="mail" placeholder="Your e-mail">
+  <input type="text" name="subject" placeholder="Subject">
+  <textarea type="message" placeholder="Message"></textarea>
+  <button type="submit" name="submit">SEND MAIL</button>
+</form>
 
-    <textarea id="write" name="write" placeholder="Write something.." style="height:200px;width:88%"></textarea>
-<br/>
-    <input type="submit" value="Send message">
-  </form>
-</div>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+ 
+ <br/><br/><br/><br/><br/>
+<ul>
+  <li  style="float: right;"><img src="instagram.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="facebook.png" alt="" style="height:35px">&emsp;</li>
+  <li style="float: right;"><img src="whatsapp.png" alt="" style="height:35px">&emsp;</li>
+  
+</ul>
 
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 </html>
 <?php 

@@ -3,7 +3,6 @@ echo "<h1>My favourite</h1>";
 echo "<br/>";
 if(isset($_POST['submit'])){
 if(!empty($_POST['check_list'])) {
-// Loop to store and display values of individual checked checkbox.
 
 foreach($_POST['check_list'] as $selected) {
 
